@@ -36,7 +36,7 @@ RUN useradd -r -d ${SHINY_SERVER_APP_DIR} -m shiny && \
     mkdir -p ${SHINY_SERVER_LOG_DIR} ${SHINY_SERVER_LIB_DIR} && \
     chown shiny ${SHINY_SERVER_LOG_DIR} ${SHINY_SERVER_LIB_DIR}
 
-WORKDIR /srv/shiny-server
+WORKDIR $SHINY_SERVER_APP_DIR
 
 USER shiny
 
